@@ -1,0 +1,50 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0f1117;
+  --bg2:      #1a1d27;
+  --bg3:      #22263a;
+  --border:   #2d3148;
+  --primary:  #6c63ff;
+  --success:  #22c55e;
+  --warning:  #f59e0b;
+  --danger:   #ef4444;
+  --info:     #3b82f6;
+  --muted:    #64748b;
+  --text:     #e2e8f0;
+  --text2:    #94a3b8;
+  --font:     -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono:     'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+}
+
+body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.5; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+button { cursor: pointer; border: none; outline: none; font-family: inherit; }
+input, select { font-family: inherit; outline: none; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.badge-info    { background: rgba(59,130,246,0.15); color: #60a5fa; }
+.badge-warn    { background: rgba(245,158,11,0.15); color: #fbbf24; }
+.badge-error   { background: rgba(239,68,68,0.15);  color: #f87171; }
+.badge-debug   { background: rgba(100,116,139,0.15);color: #94a3b8; }
+.badge-success { background: rgba(34,197,94,0.15);  color: #4ade80; }
+
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-green  { background: var(--success); box-shadow: 0 0 6px var(--success); }
+.dot-red    { background: var(--danger);  box-shadow: 0 0 6px var(--danger);  }
+.dot-yellow { background: var(--warning); box-shadow: 0 0 6px var(--warning); }
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+.pulse { animation: pulse 1.5s ease-in-out infinite; }
+
+@keyframes fadeIn { from{opacity:0;transform:translateY(-4px)} to{opacity:1;transform:translateY(0)} }
+.fade-in { animation: fadeIn 0.2s ease; }

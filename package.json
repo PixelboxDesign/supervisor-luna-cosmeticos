@@ -1,0 +1,12 @@
+{
+  "name": "supervisor-luna",
+  "version": "1.0.0",
+  "description": "Supervisor de logs — Luna Cosméticos",
+  "scripts": {
+    "backend": "node backend/src/server.js",
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "electron": "cd electron && npx electron .",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install && cd ../electron && npm install"
+  }
+}

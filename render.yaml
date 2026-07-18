@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: supervisor-luna
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_SUPERVISOR_URL
+        value: ""
+      - key: VITE_SUPERVISOR_WS
+        value: ""
