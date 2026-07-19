@@ -6,6 +6,6 @@ services:
     staticPublishPath: frontend/dist
     envVars:
       - key: VITE_SUPERVISOR_URL
-        value: ""
+        value: "https://desktop-e6jr4dk.tailc1230a.ts.net/logs"
       - key: VITE_SUPERVISOR_WS
-        value: ""
+        value: "wss://desktop-e6jr4dk.tailc1230a.ts.net/logs/ws"
