@@ -18,7 +18,8 @@ const SUPERVISOR_SCRIPT = path.join(SUPERVISOR_DIR, 'src', 'server.js');
 const LUNA_DIR        = path.resolve(__dirname, '..', '..', 'trafego_luna_cosmeticos');
 const LUNA_SCRIPT     = path.join(LUNA_DIR, 'backend', 'server.js');
 const LUNA_ENV        = path.join(LUNA_DIR, '.env.local');
-const FRONTEND_URL    = 'https://supervisor-luna-cosmeticos.onrender.com';
+const FRONTEND_URL = process.env.SUPERVISOR_FRONTEND_URL
+  || 'http://localhost:4500/panel';
 
 // node.exe do sistema (não o do Electron)
 function findNodeExe() {
